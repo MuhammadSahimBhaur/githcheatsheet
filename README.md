@@ -111,6 +111,12 @@ Dry run
 Remove directories
 > `-d`
 
+# Deleteing a branch
+
+`git branch -d branch-name`
+
+`-d = safe delete` (won’t delete if unmerged). Use capital D to force this flag.
+
 
 # Github
 
@@ -138,10 +144,20 @@ The following command will only push the specified branch to remote.
 
 `git push -u <REMOTE; i.e. origin> <BRANCH; i.e. main>`
 
+The `-u` flag stands for `--set-upstream` and specifies the 
+
 We can pull in changes using
 
 `git pull origin`
 
+
+# Mapping local branches to remote branches
+
+To push a local branch's commits to a different remote branch we can use the `:` colon symbol.
+
+`git push -u remote new-feature:main`
+
+We can also use this to delete a remote branch `git push -u remote :<REMOTE BRANCH YOU WANT TO DELETE>`. 
 
 
 
